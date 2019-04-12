@@ -1,0 +1,9 @@
+﻿<krpano version="1.19" title="Russian Space 360">
+
+
+   <view hlookat="-0.505" vlookat="-14.975" fovtype="MFOV" fov="94.884" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+	<image>
+		<sphere url="baikonur-pad1-23.jpg" />
+	</image>
+
+</krpano>

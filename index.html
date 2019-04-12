@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gagarin</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <script src="tour.js"></script>
+</head>
+<body>
+  <div id="pano">
+    <noscript>
+      <table style="width:100%;height:100%;background-color:#fff;"><tr style="valign:middle;"><td><div style="text-align:center;">
+      <h1>БАЙКОНУР</h1>
+      <h2>Запуск ракеты-носителя «Протон-М» с Intelsat 23</h2>
+      <p><img src="proton.jpg" alt="Запуск ракеты-носителя «Протон-М» с Intelsat 23" /></p>
+      <p>Для просмотра данной панорамы требуется включить Javascript и/или обновить Ваш браузер.</p>
+      </div></td></tr></table>
+    </noscript>
+
+    <div id="start">
+      <div class="logo"><span>1 серия</span></div>
+
+      <div class="title">
+        <h1>Площадка № 1 «Гагаринский старт»</h1>
+        <span>Космодром «Байконур»</span>
+      </div>
+
+      <div class="tools">
+        <div class="tools_block ltools">
+          <div class="tool t1"></div>
+          <div class="tool t2"></div>
+          <div class="tool t3"></div>
+        </div>
+        <div class="tools_block rtools">
+          <div class="partner p1"></div>
+          <div class="partner p2"></div>
+          <div class="partner p3"></div>
+          <div class="partner p4"></div>
+          <div class="partner p5"></div>
+          <div class="partner p6"></div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+<script>
+const pano = document.querySelector('#pano');
+const start = document.querySelector('#start');
+start.addEventListener('click', function(){
+
+		var settings = {};
+		settings["language"] = "rus";
+		settings["js_checktut"] = checktut;
+		settings["js_htmlpath"] = "index";
+		settings["startscene"] = "pano-0759";
+
+		embedpano({swf:"http://www.360pano.eu/baikonur/pano/krpano/pano.swf",
+					xml:"http://www.360pano.eu/baikonur/pano/xml/tour_rus.xml",
+					target:"pano",
+					html5:"auto",
+					wmode:"opaque",
+					passQueryParameters:true,
+					id:"krpanoObject",
+					vars:settings
+    });
+
+  pano.parentNode.removeChild(start)
+})
+</script>
+</body>
+</html>
