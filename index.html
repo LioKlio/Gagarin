@@ -53,23 +53,7 @@
 const pano = document.querySelector('#pano');
 const start = document.querySelector('#start');
 start.addEventListener('click', function(){
-
-		var settings = {};
-		settings["language"] = "rus";
-		settings["js_checktut"] = checktut;
-		settings["js_htmlpath"] = "index";
-		settings["startscene"] = "pano-0759";
-
-		embedpano({swf:"http://www.360pano.eu/baikonur/pano/krpano/pano.swf",
-					xml:"http://www.360pano.eu/baikonur/pano/xml/tour_rus.xml",
-					target:"pano",
-					html5:"auto",
-					wmode:"opaque",
-					passQueryParameters:true,
-					id:"krpanoObject",
-					vars:settings
-    });
-
+  embedpano({swf:"tour.swf", xml:"tour.xml", target:"pano", html5:"false", mobilescale:1.0, passQueryParameters:true});
   pano.parentNode.removeChild(start)
 })
 </script>
