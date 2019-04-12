@@ -15,29 +15,34 @@ body {background: #0a62b4 url(../img/baikonur_pad-1-1.jpg) 50% 50% no-repeat; ba
 #start * {color: #fff;}
 
 .logo {position: relative; width: 200px; height: 100px; background: url(../img/360russian-space_rus.svg) 50% 100% no-repeat;}
-.logo span {position: absolute; left: 38%; bottom: -14px;}
-
-
+.logo span {position: absolute; left: 38%; bottom: -14px; }
 
 .title {text-align: center;}
-h1 {padding: 20px; font-size: 42pх;}
+h1 {padding: 20px; font-size: 6vw;}
+.title span {font-size: 2vw}
 
 .tools {width: 100%; display: flex; justify-content: stretch;}
 .tools_block { width: 50%; display: flex;}
 .rtools {justify-content: flex-end;}
 
-.tool, .partner {width: 30px; height: 30px; }
-.t1 {background: url(../img/360desktop.svg) 50% 500% no-repeat;}
-.t2 {background: url(../img/360mobile.svg) 50% 500% no-repeat;}
-.t3 {background: url(../img/360vr.svg) 50% 500% no-repeat;}
+.tool, .partner {margin: 0 1vw; width: 4vw; height: 60px; background-size: cover; }
+.t1 {background: url(../img/360desktop.svg) 50% 50% no-repeat; margin-right: 0;}
+.t2 {background: url(../img/360mobile.svg) 50% 50% no-repeat;}
+.t3 {background: url(../img/360vr.svg) 50% 50% no-repeat;}
 
-.p1 {background: url(../img/partner_360pano.svg) 50% 500% no-repeat;}
-.p2 {background: url(../img/partner_cone-center.svg) 50% 500% no-repeat;}
-.p3 {background: url(../img/partner_fkr.svg) 50% 500% no-repeat;}
-.p4 {background: url(../img/partner_star-trek.svg) 50% 500% no-repeat;}
-.p5 {background: url(../img/partner_space-club.svg) 50% 500% no-repeat;}
-.p6 {background: url(../img/partner_alima.svg) 50% 500% no-repeat;}
+.p1 {background: url(../img/partner_360pano.svg) 50% 50% no-repeat;}
+.p2 {background: url(../img/partner_cone-center.svg) 50% 50% no-repeat;}
+.p3 {background: url(../img/partner_fkr.svg) 50% 50% no-repeat;}
+.p4 {background: url(../img/partner_star-trek.svg) 50% 50% no-repeat;}
+.p5 {background: url(../img/partner_space-club.svg) 50% 50% no-repeat;}
+.p6 {background: url(../img/partner_alima.svg) 50% 50% no-repeat;}
 
 
 @-ms-viewport { width:device-width; }
 @media only screen and (min-device-width:800px) { html { overflow:hidden; } }
+@media screen and (max-width: 1050px){
+  .title span {font-size: 3vw}
+}
+@media screen and (max-width: 769px){
+  .tool, .partner {width: 6vw;}
+}

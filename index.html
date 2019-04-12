@@ -47,14 +47,11 @@
       </div>
     </div>
 
-
   </div>
 <script>
-const pano = document.querySelector('#pano');
 const start = document.querySelector('#start');
 start.addEventListener('click', function(){
   embedpano({swf:"tour.swf", xml:"tour.xml", target:"pano", html5:"false", mobilescale:1.0, passQueryParameters:true});
-  // pano.parentNode.removeChild(start)
 })
 </script>
 </body>
