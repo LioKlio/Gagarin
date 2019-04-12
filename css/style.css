@@ -6,12 +6,12 @@ src: local('../fonts/PFDinTextCompPro-Light'), url('../fonts/PFDinTextCompPro-Li
 }
 
 * {margin: 0; padding: 0; outline: none; box-sizing: border-box;}
-html {font-size: 18px;}
-body, #pano, #start { width: 100vw; height: 100vh;font-family:'PFDinTextCompPro-Light'; font-weight:normal; }
+html {height: 100%; font-size: 18px;}
+body, #pano, #start { width: 100vw; height: 100%;font-family:'PFDinTextCompPro-Light'; font-weight:normal; }
 
 body {background: #0a62b4 url(../img/baikonur_pad-1-1.jpg) 50% 50% no-repeat; background-size: cover;}
 
-#start {padding: 2%; display: flex; flex-direction: column; justify-content: space-between; align-items: center;}
+#start {padding: 2%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; cursor: pointer;}
 #start * {color: #fff;}
 
 .logo {position: relative; width: 200px; height: 100px; background: url(../img/360russian-space_rus.svg) 50% 100% no-repeat;}
@@ -19,7 +19,7 @@ body {background: #0a62b4 url(../img/baikonur_pad-1-1.jpg) 50% 50% no-repeat; ba
 
 .title {text-align: center;}
 h1 {padding: 20px; font-size: 6vw;}
-.title span {font-size: 2vw}
+.title span {font-size: 3vw}
 
 .tools {width: 100%; display: flex; justify-content: stretch;}
 .tools_block { width: 50%; display: flex;}
@@ -41,8 +41,13 @@ h1 {padding: 20px; font-size: 6vw;}
 @-ms-viewport { width:device-width; }
 @media only screen and (min-device-width:800px) { html { overflow:hidden; } }
 @media screen and (max-width: 1050px){
-  .title span {font-size: 3vw}
+  .title span {font-size: 5vw}
 }
 @media screen and (max-width: 769px){
   .tool, .partner {width: 6vw;}
+}
+@media screen and (max-width: 415px){
+  .tools {flex-direction: column; justify-content: center;}
+  .tools_block {width: 100%; justify-content: center}
+  .tool, .partner {margin: 0 2vw; width: 10vw;}
 }
