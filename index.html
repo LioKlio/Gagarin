@@ -52,6 +52,7 @@
 const start = document.querySelector('#start');
 start.addEventListener('click', function(){
   embedpano({swf:"tour.swf", xml:"tour.xml", target:"pano", html5:"false", mobilescale:1.0, passQueryParameters:true});
+  this.parentNode.removeChild(this)
 })
 </script>
 </body>
