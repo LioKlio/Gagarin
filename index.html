@@ -54,7 +54,13 @@ start.addEventListener('click', function(e){
   console.log(e.target);
   if(e.target.classList.contains('rtools')) return 1;
   if(e.target.classList.contains('partner')){
-    alert(`I\'am partner class: ${e.target.classList}`)
+    // alert(`I\'am partner class: ${e.target.classList}`)
+    if(e.target.classList.contains('p1')) window.location.href = '//www.google.com';
+    if(e.target.classList.contains('p2')) window.location.href = '//www.google.com';
+    if(e.target.classList.contains('p3')) window.location.href = '//www.google.com';
+    if(e.target.classList.contains('p4')) window.location.href = '//www.google.com';
+    if(e.target.classList.contains('p5')) window.location.href = '//www.google.com';
+    if(e.target.classList.contains('p6')) window.location.href = '//www.google.com';
   } else {
     embedpano({swf:"tour.swf", xml:"tour.xml", target:"pano", html5:"false", mobilescale:1.0, passQueryParameters:true});
     this.parentNode.removeChild(this)
