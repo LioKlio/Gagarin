@@ -56,7 +56,6 @@ start.addEventListener('click', function(e){
   if(e.target.classList.contains('partner')){
     alert(`I\'am partner class: ${e.target.classList}`)
   } else {
-    return 1;
     embedpano({swf:"tour.swf", xml:"tour.xml", target:"pano", html5:"false", mobilescale:1.0, passQueryParameters:true});
     this.parentNode.removeChild(this)
   }
